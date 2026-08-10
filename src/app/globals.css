@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), var(--font-geist-sans), ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+@theme {
+  /* Neutral scale — cards, borders, text. No hue; white does the work. */
+  --color-earth-50: #ffffff;
+  --color-earth-100: #f4f4f5;
+  --color-earth-200: #e4e4e7;
+  --color-earth-300: #d4d4d8;
+  --color-earth-400: #a1a1aa;
+  --color-earth-500: #71717a;
+  --color-earth-600: #52525b;
+  --color-earth-700: #3f3f46;
+  --color-earth-800: #27272a;
+  --color-earth-900: #18181b;
+
+  /* Near-black navy — the one accent. Reserved for selection and the
+     primary action. Kept out of the score scale (green-to-red,
+     ScoreBadge.tsx) and out of the bucket palette (buckets.ts) on purpose. */
+  --color-clay-50: #eef1f5;
+  --color-clay-100: #dde3ea;
+  --color-clay-200: #c1c9d6;
+  --color-clay-300: #94a1b5;
+  --color-clay-400: #64748b;
+  --color-clay-500: #0f172a;
+  --color-clay-600: #0b1220;
+  --color-clay-700: #070c16;
+  --color-clay-800: #030509;
+
+  /* Muted slate — the secondary-action color (View Resume, View Cover
+     Letter). Same cool-neutral family as the navy accent (so it reads as
+     "this app's palette", not a clashing bright purple next to near-black
+     navy) but lighter, so it's clearly a lower-emphasis action. Kept as its
+     own hue rather than collapsing to earth-gray, which read as disabled. */
+  --color-sage-50: #f1f5f9;
+  --color-sage-100: #e2e8f0;
+  --color-sage-400: #64748b;
+  --color-sage-500: #475569;
+  --color-sage-600: #334155;
+  --color-sage-700: #1e293b;
+
+  --color-success-bg: #ecfdf5;
+  --color-success-text: #047857;
+  --color-warning-bg: #fffbeb;
+  --color-warning-text: #b45309;
+  --color-error-bg: #fef2f2;
+  --color-error-text: #b91c1c;
+
+  --shadow-xl: 0 20px 25px -5px rgba(24, 24, 27, 0.1),
+    0 10px 10px -5px rgba(24, 24, 27, 0.04);
+  --animate-slide-up: slide-up 0.3s ease-out;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #18181b;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+/* Job detail panel: replays only when the selected job actually changes
+   (see key={job.job_id} in JobDetailPanel), never on ordinary re-renders. */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-panel-in {
+    animation: panel-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-dropdown-in {
+    animation: dropdown-in 140ms cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: bottom left;
+  }
+}
+
