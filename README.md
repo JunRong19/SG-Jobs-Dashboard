@@ -4,7 +4,7 @@ A Next.js dashboard for the [job-scraper](https://github.com/JunRong19/job-scrap
 
 ## Features
 
-- **Dashboard** — Bucketed views (Total, Applied, In-progress, Not interested, Rejected, Expired) with live counts, plus a "Scraped Today" toggle
+- **Dashboard** - Bucketed views (Total, Applied, In-progress, Not interested, Rejected, Expired) with live counts, plus a "Scraped Today" toggle
 - **Search & filtering** - Full-text search plus provider, score-range and posted/scraped date-range filters
 - **Documents library** - Every generated resume/cover letter in one place, with an in-browser PDF viewer
 - **Profile page** - View and edit your base resume
@@ -13,7 +13,7 @@ A Next.js dashboard for the [job-scraper](https://github.com/JunRong19/job-scrap
 
 - **Next.js 16** (App Router) + **React 19** + **TypeScript**
 - **Tailwind CSS 4**
-- **Supabase** (Postgres + Storage, `@supabase/ssr`) — shares its schema with the [job-scraper](https://github.com/JunRong19/job-scraper) Python backend
+- **Supabase** (Postgres + Storage, `@supabase/ssr`) - shares its schema with the [job-scraper](https://github.com/JunRong19/job-scraper) Python backend
 - **pdfkit** for server-side PDF generation (resumes + cover letters)
 - **react-pdf** for in-browser PDF preview
 - **react-markdown** + **remark-gfm** for job description rendering
