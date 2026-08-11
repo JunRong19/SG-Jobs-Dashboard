@@ -13,11 +13,9 @@ A Next.js dashboard for the [job-scraper](https://github.com/JunRong19/job-scrap
 
 - **Next.js 16** (App Router) + **React 19** + **TypeScript**
 - **Tailwind CSS 4**
-- **Supabase** (Postgres + Storage, `@supabase/ssr`) - shares its schema with the [job-scraper](https://github.com/JunRong19/job-scraper) Python backend
+- **Supabase** for storage
 - **pdfkit** for server-side PDF generation (resumes + cover letters)
 - **react-pdf** for in-browser PDF preview
-- **react-markdown** + **remark-gfm** for job description rendering
-- **lucide-react** for icons
 
 ## Screenshots
 
