@@ -1,7 +1,5 @@
 # Job Scraper Web
 
-## Summary
-
 A Next.js dashboard for the [job-scraper](https://github.com/JunRong19/job-scraper) pipeline - browse every job it scrapes, track your application status and generate a tailored AI resume and cover letter per job.
 
 ## Features
