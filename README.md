@@ -18,7 +18,7 @@ A Next.js dashboard for the [sg-jobs-scraper](https://github.com/JunRong19/SG-Jo
 
 ## Tech Stack
 
-- **Next.js 16** (App Router) + **React 19** + **TypeScript**
+- **Next.js 16** + **React 19** + **TypeScript**
 - **Tailwind CSS 4**
 - **Supabase** for storage
 - **pdfkit** for server-side PDF generation (resumes + cover letters)
